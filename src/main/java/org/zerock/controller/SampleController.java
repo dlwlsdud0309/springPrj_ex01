@@ -14,6 +14,6 @@ public class SampleController {
 
 	@RequestMapping("")
 	public void basic() {
-		
+		log.info("basic.....................");
 	}
 }
