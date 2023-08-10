@@ -11,6 +11,11 @@ public class SampleDTOList {
 	
 	private List<SampleDTO> list;
 	
+	//List컬렉션에 대하여
+	//List<E> list = new ArrayList<E>(); --E에 지정된 타입의 객체만 저장
+	//List<E> list = new ArrayList<>(); --E에 지정된 타입의 객체만 저장
+	//List list = new ArrayList(); --모든 타입의 객체를 저장
+	
 	public SampleDTOList() {
 		list = new ArrayList<>();
 	}
