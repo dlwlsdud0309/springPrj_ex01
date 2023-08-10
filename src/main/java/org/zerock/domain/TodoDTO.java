@@ -9,4 +9,5 @@ public class TodoDTO {
 
 	private String title;
 	private Date dueDate;
+	
 }
