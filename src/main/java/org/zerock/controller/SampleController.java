@@ -72,6 +72,7 @@ public class SampleController {
 	public String ex02List(@RequestParam("ids")ArrayList<String> ids) {
 	//public @ResponseBody String ex02List(@RequestParam("ids")ArrayList<String> ids) {
 	//위처럼 @ResponseBody를 추가했을 경우 화면에 오류 메세지, 그리고 데이터가 아니라 ex02List만 출력됨
+	//이는 @ResponseBody가 VO 객체를 JSON으로 바꿔서 HTTP body에 담는 어노테이션이기 때문이다
 		
 		log.info("ids : "+ids);
 		
