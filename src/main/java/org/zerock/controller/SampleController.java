@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.zerock.domain.SampleDTO;
 import org.zerock.domain.SampleDTOList;
 import org.zerock.domain.TodoDTO;
@@ -113,5 +114,18 @@ public class SampleController {
 	@GetMapping("/ex05")
 	public void ex05() {
 		log.info("/ex05.................");
+	}
+	
+	//리턴 타입을 복합적인 데이터가 들어간 객체 타입으로 지정하기 위해 jackson-databind 라이브러리 추가
+	@GetMapping("/ex06")
+	public @ResponseBody SampleDTO ex06() {
+		
+		log.info("/ex06.............");
+		
+		SampleDTO dto = new SampleDTO();
+		dto.setAge(10);
+		dto.setName("홍길동");
+		
+		return dto;
 	}
 }
