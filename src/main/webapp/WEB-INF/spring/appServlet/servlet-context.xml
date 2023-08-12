@@ -16,6 +16,8 @@
 	<resources mapping="/resources/**" location="/resources/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<!-- Controller에서 return을 지정해도 404 [파일 [/WEB-INF/views/sample/ex05.jsp]을(를) 찾을 수 없습니다.]
+		메세지가 출력되는 이유는 이와 같이 URL 경로를 view로 처리하기 때문이다 -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
