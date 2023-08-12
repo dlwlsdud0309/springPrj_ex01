@@ -70,6 +70,8 @@ public class SampleController {
 	//동일한 이름의 파라미터가 여러 개 전달되는 경우
 	@GetMapping("/ex02List")
 	public String ex02List(@RequestParam("ids")ArrayList<String> ids) {
+	//public @ResponseBody String ex02List(@RequestParam("ids")ArrayList<String> ids) {
+	//위처럼 @ResponseBody를 추가했을 경우 화면에 오류 메세지, 그리고 데이터가 아니라 ex02List만 출력됨
 		
 		log.info("ids : "+ids);
 		
