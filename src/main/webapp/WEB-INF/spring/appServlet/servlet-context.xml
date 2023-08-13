@@ -23,6 +23,12 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beansproperty name="defaultEncoding" value="utf-8"></beansproperty>	
+		<!-- 1024 * 1024 * 10 bytes 10MB -->
+	
+	</beans:bean>
+	
 	<context:component-scan base-package="org.zerock.controller" />
 	
 	
