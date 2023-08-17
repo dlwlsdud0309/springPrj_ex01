@@ -31,6 +31,14 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
 		</init-param>
+		
+		<!-- 500 에러 메세지는 Internal Server Error이므로 @ExceptionHandler를 이용하여 처리하나
+			404 에러 메세지의 경우 web.xml을 이용하여 별도의 에러 페이지를 지정, 처리하도록 아래 코드를 추가함 -->
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 		
