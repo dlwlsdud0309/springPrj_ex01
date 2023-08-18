@@ -1,0 +1,5 @@
+패키지의 Naming Convention
+
+config : 프로젝트와 관련된 설정 클래스들의 보관 패키지
+domain : VO, DTO 클래스들의 패키지(VO는 Read Only의 목적으로 테이블과 관련된 데이터 위주, DTO는 데이터 수집의 용도)
+persistence : MyBatis Mapper 인터페이스 패키지
